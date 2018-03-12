@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from . import view
+from . import view, testdb
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^hello/$', view.hello),
     url(r'^person/$', view.person),
     url(r'^base/$', view.base),
-    url(r'^hello2/$',view.hello2)
+    url(r'^hello2/$', view.hello2),
+    url(r'^testdb/add/$', testdb.add),
+    url(r'^testdb/list/$', testdb.list),
+    url(r'^testdb/update/$', testdb.update),
+    url(r'^testdb/delete/$', testdb.delete)
 ]
