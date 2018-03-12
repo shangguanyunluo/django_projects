@@ -20,7 +20,7 @@ from . import search
 from . import search2
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^hello/$', view.hello),
     url(r'^person/$', view.person),
     url(r'^base/$', view.base),
